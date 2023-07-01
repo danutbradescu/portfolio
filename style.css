@@ -341,9 +341,49 @@ form .btn2{
 .copyright i{
     color:  #ccbd00;
 }
-/*---------------css for small screens-----------------    treb lucrat pentru poze pt varianta de tel
-@media only screen and (max-with:600px){
-    #header{
-        background-image: url();
+
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    nav ul {
+      display: none;
     }
-}
+  
+    nav ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    nav .menu-toggle {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+  
+    nav .menu-toggle::after {
+      content: "\f0c9";
+      font-family: FontAwesome;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  
+    nav .menu-toggle.active::after {
+      content: "\f00d";
+    }
+  
+    nav .menu-toggle,
+    nav .menu-toggle.active ~ ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav .menu-toggle.active ~ ul {
+      margin-left: 0;
+    }
+  }
+  
+  
+  

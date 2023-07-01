@@ -11,18 +11,22 @@
 
 </head>
 <body>
+    
     <div id="header">
     <div class="container">
         <nav>
             <h3 class="logo">BRADESCU DANUT</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="https://github.com/danutbradescu">GitHub</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="menu-toggle">
+            
+            </div>
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="https://github.com/danutbradescu">GitHub</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav> 
+          </nav>
         <div class="header-text">
             
             <h1>Hi, I'm <span>Danut</span> <br><span class="multiText"></span></h1>
@@ -210,6 +214,11 @@
         backSpeed : 80,
         backDelay : 1500 
     })
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.menu').classList.toggle('active');
+});
+
 </script>
 
 </body>
